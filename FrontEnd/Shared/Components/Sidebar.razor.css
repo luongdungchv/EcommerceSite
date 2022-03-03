@@ -16,6 +16,10 @@
 .p:hover{
     cursor:pointer;
 }
+.p:hover, .option{
+    cursor:pointer;
+    color:green;
+}
 .product-list-panel{
     position:absolute;
     width:60vw;

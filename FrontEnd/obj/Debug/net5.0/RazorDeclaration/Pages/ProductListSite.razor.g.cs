@@ -12,112 +12,119 @@ namespace FrontEnd.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\_Imports.razor"
+#line 1 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\_Imports.razor"
+#line 2 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
 using System.Collections.Generic;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\_Imports.razor"
+#line 3 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
+using System.Linq.Expressions;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\_Imports.razor"
+#line 5 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\_Imports.razor"
+#line 6 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\_Imports.razor"
+#line 7 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\_Imports.razor"
+#line 8 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\_Imports.razor"
+#line 9 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\_Imports.razor"
+#line 10 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\_Imports.razor"
+#line 11 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
 using FrontEnd;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\_Imports.razor"
+#line 12 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
 using FrontEnd.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\_Imports.razor"
+#line 13 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
 using FrontEnd.Shared.Components;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 13 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\_Imports.razor"
+#line 14 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
 using FrontEnd.Shared.ItemSiteComponents;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 14 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\_Imports.razor"
+#line 15 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
 using MatBlazor;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 15 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\_Imports.razor"
+#line 16 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
 using MongoDB.Driver;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 16 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\_Imports.razor"
+#line 17 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
 using FrontEnd.Shared.ProductListSite;
 
 #line default
@@ -133,15 +140,19 @@ using FrontEnd.Shared.ProductListSite;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 30 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\Pages\ProductListSite.razor"
+#line 31 "D:\MyProjects\Github\EcommerceSite\FrontEnd\Pages\ProductListSite.razor"
        
     [Parameter]
     public string Id { get; set; }
     private List<ProductData> itemDatas = new();
-    private List<FilterDefinition<ProductData>> filterList = new();
+    private FilterDefinition<ProductData>[] filterList = {
+Builders<ProductData>.Filter.Empty,
+Builders<ProductData>.Filter.Empty
+};
     private IMongoCollection<ProductData> collection;
-    private HashSet<string> manufacturerSet = new();
-    private HashSet<string> priceSet = new();
+    private Dictionary<string, Expression<Func<ProductData, bool>>> manufacturerSet = new();
+    private Dictionary<string, Expression<Func<ProductData, bool>>> priceSet = new();
+    Action<Expression<Func<ProductData, bool>>> filterAction;
 
     private int currentPage = 1;
     private int allPage = 0;
@@ -153,17 +164,30 @@ using FrontEnd.Shared.ProductListSite;
         var db = client.GetDatabase("EcommerceSite");
         collection = db.GetCollection<ProductData>("Items");
 
+        filterAction = (m) =>
+        {
+            FilterAction(m);
+        };
+
         manufacturerSet = await GetManufacturers();
         priceSet = await GetPrice();
         var filter = Builders<ProductData>.Filter.Eq(m => m.Type, Id);
-        filterList.Add(filter);
-        var count = collection.CountDocuments(Builders<ProductData>.Filter.And(filterList));
-        allPage = (int)(count / itemsPerPage + 1);
+        filterList[0] = filter;
+
         await QueryItems(1);
+    }
+    private async Task CountPages()
+    {
+        var count = await collection.CountDocumentsAsync(Builders<ProductData>.Filter.And(filterList));
+        allPage = (int)(count / itemsPerPage + 1);
     }
     private async Task QueryItems(int page)
     {
-        var result = await collection.Find(Builders<ProductData>.Filter.And(filterList))
+        var operation = collection.Find(Builders<ProductData>.Filter.And(filterList));
+        var count = (await operation.ToListAsync()).Count;
+        allPage = (int)(count / itemsPerPage + 1);
+
+        var result = await operation
         .Limit(itemsPerPage)
         .Skip((page - 1) * itemsPerPage)
         .ToListAsync();
@@ -175,32 +199,61 @@ using FrontEnd.Shared.ProductListSite;
         await QueryItems(page);
         currentPage = page;
         StateHasChanged();
+
     }
-    private async Task<HashSet<string>> GetManufacturers()
+    private async Task<Dictionary<string, Expression<Func<ProductData, bool>>>> GetManufacturers()
     {
         var filter = Builders<ProductData>.Filter.Eq(m => m.Type, Id);
         var list = await collection.Find(filter).ToListAsync();
         HashSet<string> manufacturerSet = new();
+        Dictionary<string, Expression<Func<ProductData, bool>>> dict = new Dictionary<string, Expression<Func<ProductData,
+        bool>>>();
+
         foreach (var i in list)
         {
+            if (!dict.ContainsKey(i.Manufacturer)) dict.Add(i.Manufacturer, (p) => p.Manufacturer == i.Manufacturer);
             manufacturerSet.Add(i.Manufacturer);
         }
-        return manufacturerSet;
+        Console.WriteLine(dict["ViewSonic"]);
+        return dict;
     }
-    private async Task<HashSet<string>> GetPrice()
+    private async Task<Dictionary<string, Expression<Func<ProductData, bool>>>> GetPrice()
     {
-         var filter = Builders<ProductData>.Filter.Eq(m => m.Type, Id);
+        var filter = Builders<ProductData>.Filter.Eq(m => m.Type, Id);
         var list = await collection.Find(filter).ToListAsync();
         HashSet<string> res = new();
-        foreach(var i in list){
+        Dictionary<string, Expression<Func<ProductData, bool>>> dict = new Dictionary<string, Expression<Func<ProductData,
+        bool>>>();
+        foreach (var i in list)
+        {
             var price = i.Price;
-            if(price <= 1000000) res.Add("<= 1m");
-            if(price > 1000000 && price <= 3000000) res.Add("1m - 3m");
-            if(price > 3000000 && price <= 7000000) res.Add("3m - 7m");
-            if(price > 7000000) res.Add("> 7m");
-            
+            if (price <= 1000000 && !dict.ContainsKey("<= 1m"))
+            {
+                dict.Add("<= 1m", m => m.Price <= 1000000);
+            }
+            if (price > 1000000 && price <= 3000000 && !dict.ContainsKey("1m - 3m"))
+            {
+                dict.Add("1m - 3m", m => m.Price > 1000000 && m.Price <= 3000000);
+            }
+            if (price > 3000000 && price <= 7000000 && !dict.ContainsKey("3m - 7m"))
+            {
+                dict.Add("3m - 7m", m => m.Price > 3000000 && m.Price <= 7000000);
+            }
+            if (price > 7000000 && !dict.ContainsKey("<= 7m>"))
+            {
+                dict.Add("> 7m", m => m.Price > 7000000);
+            }
+
         }
-        return res;
+        return dict;
+    }
+    private async void FilterAction(Expression<Func<ProductData, bool>> m)
+    {
+        var filter = Builders<ProductData>.Filter.Where(m);
+        filterList[1] = filter;
+        await QueryItems(currentPage);
+        Console.WriteLine("clicked");
+        StateHasChanged();
     }
 
 #line default

@@ -9,7 +9,7 @@
     display: grid;
     width:100%;
     grid-template-columns: 33.3% 33.3% 33.3%;
-    grid-template-rows: 360px 360px 360px 360px;
+    grid-template-rows: auto auto auto auto;
 }
 .filter{
     width:25%;

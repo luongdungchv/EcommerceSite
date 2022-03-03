@@ -1,16 +1,19 @@
 <div class="filter-panel">
     <p>@Name</p>
+    @{Console.WriteLine(filterMenu.Count.ToString()+"S");}
     @foreach(var i in filterMenu){
-        <label class="filter-item">
+        <label class="filter-item" @onclick="@(() => ClickCallback(i.Value))">
             <input type = "radio" name="items"/>
             <div class="checkmark"></div>
-            <span class="text">@i</span>
+            <span class="text">@i.Key</span>
         </label>
     }
 </div>
 @code{
     [Parameter]
-    public HashSet<string> filterMenu{get;set;}
+    public Dictionary<string, Expression<Func<ProductData, bool>>> filterMenu{get;set;}
     [Parameter]
     public string Name{get;set;}
+    [Parameter]
+    public Action<Expression<Func<ProductData, bool>>> ClickCallback{get;set;}
 }

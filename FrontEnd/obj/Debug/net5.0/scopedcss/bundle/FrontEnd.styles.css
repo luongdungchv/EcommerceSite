@@ -29,7 +29,7 @@
     display: grid;
     width:100%;
     grid-template-columns: 33.3% 33.3% 33.3%;
-    grid-template-rows: 360px 360px 360px 360px;
+    grid-template-rows: auto auto auto auto;
 }
 .filter[b-xj49gjo6ci]{
     width:25%;
@@ -317,6 +317,10 @@ span[b-ur6xjcq6vq]{
 }
 .p:hover[b-oa0dybiacu]{
     cursor:pointer;
+}
+.p:hover[b-oa0dybiacu], .option[b-oa0dybiacu]{
+    cursor:pointer;
+    color:green;
 }
 .product-list-panel[b-oa0dybiacu]{
     position:absolute;

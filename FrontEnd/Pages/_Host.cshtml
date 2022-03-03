@@ -19,7 +19,7 @@
 <link href="_content/MatBlazor/dist/matBlazor.css" rel="stylesheet" />
 </head>
 <body>
-    <component type="typeof(App)" render-mode="ServerPrerendered" />
+    <component type="typeof(App)" render-mode="Server" />
 
     <div id="blazor-error-ui">
         <environment include="Staging,Production">
@@ -33,5 +33,40 @@
     </div>
 
     <script src="_framework/blazor.server.js"></script>
+    <script>
+        window.FoldoutStyling = (a, b, c) => {
+            a.onmouseover = () => {
+                b.style["display"] = "grid";
+                b.onmouseover = () => {
+                    b.style["display"] = "grid";
+                }
+                b.onmouseleave = () => {
+                    b.style["display"] = "none";
+                }
+            }
+            a.onmouseleave = () => {
+                b.style["display"] = "none";
+            }
+            var children = b.children[0].children;
+            for(var i = 0; i < children.length; i++){
+                var d = children[i];
+                d.onmouseover = () => {
+                    c.style["display"] = "grid";
+
+                }
+                c.onmouseleave = () => {
+                    c.style["display"] = "none";
+                }
+            }
+            var cChildren = c.children;
+            for(i = 0; i < cChildren.length; i++){
+                var child = cChildren[i];
+                child.onclick = () => {
+                    c.style["display"] = "none";
+                    b.style["display"] = "none";
+                }
+            }
+        }
+    </script>
 </body>
 </html>

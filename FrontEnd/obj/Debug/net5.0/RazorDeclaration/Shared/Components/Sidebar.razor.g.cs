@@ -12,112 +12,119 @@ namespace FrontEnd.Shared.Components
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\_Imports.razor"
+#line 1 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\_Imports.razor"
+#line 2 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
 using System.Collections.Generic;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\_Imports.razor"
+#line 3 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
+using System.Linq.Expressions;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\_Imports.razor"
+#line 5 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\_Imports.razor"
+#line 6 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\_Imports.razor"
+#line 7 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\_Imports.razor"
+#line 8 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\_Imports.razor"
+#line 9 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\_Imports.razor"
+#line 10 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\_Imports.razor"
+#line 11 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
 using FrontEnd;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\_Imports.razor"
+#line 12 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
 using FrontEnd.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\_Imports.razor"
+#line 13 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
 using FrontEnd.Shared.Components;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 13 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\_Imports.razor"
+#line 14 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
 using FrontEnd.Shared.ItemSiteComponents;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 14 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\_Imports.razor"
+#line 15 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
 using MatBlazor;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 15 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\_Imports.razor"
+#line 16 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
 using MongoDB.Driver;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 16 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\_Imports.razor"
+#line 17 "D:\MyProjects\Github\EcommerceSite\FrontEnd\_Imports.razor"
 using FrontEnd.Shared.ProductListSite;
 
 #line default
@@ -131,10 +138,13 @@ using FrontEnd.Shared.ProductListSite;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 33 "D:\MyProjects\VScode Projects\EcommerceSite\FrontEnd\Shared\Components\Sidebar.razor"
+#line 35 "D:\MyProjects\Github\EcommerceSite\FrontEnd\Shared\Components\Sidebar.razor"
  
     private string showPhase1 = "hide";
     private string showPhase2 = "hide";
+    private ElementReference a;
+    private ElementReference b;
+    private ElementReference c;
     private List<string[]> sub = new List<string[]>(){
         new string[]{"Gaming Laptops", "Office Laptops"},
         new string[]{},
@@ -147,6 +157,10 @@ using FrontEnd.Shared.ProductListSite;
         new string[]{"Wifi Routers", "Wifi Cards"},
     };
     private string[] currentSub;
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await js.InvokeVoidAsync("FoldoutStyling", a, b, c);
+    }
     private void OnHover1()
     {
         showPhase1 = "show";
@@ -164,10 +178,17 @@ using FrontEnd.Shared.ProductListSite;
     {
         showPhase2 = "hide";
     }
+    private void OnClick(string url){
+        navManager.NavigateTo($"list/{url}");
+        showPhase1 = "hide";
+        showPhase2 = "hide";
+    }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime js { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager navManager { get; set; }
     }
 }
 #pragma warning restore 1591

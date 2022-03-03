@@ -1,4 +1,6 @@
-<div class="product-cate-btn">
+@inject NavigationManager navManager
+
+<div class="product-cate-btn" @onclick="@OnClick">
     <span>Something written here</span>
     <div class="banner-color" style="background-color: @(Color)">
     </div>
@@ -9,4 +11,9 @@
     public string Color {get;set;}
     [Parameter]
     public string ImgSrc {get;set;}
+    [Parameter]
+    public string url{get;set;}
+    private void OnClick(){
+        if(url != null || url != "") navManager.NavigateTo(url);
+    }
 }

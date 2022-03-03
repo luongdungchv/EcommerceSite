@@ -1,11 +1,14 @@
+@inject NavigationManager navManager
+@inject IJSRuntime js
+
 <div class="sidebar">
     <div class="sidebar-elem content">
-        <div class="p" @onmouseover="OnHover1" @onmouseout="OnLeave1">List of products</div>
+        <div class="p"  @ref="@a">List of products</div>
         <div class="p">Spec Build</div>
         <div class="p">More</div>
 
     </div>
-    <div class="product-list-panel @showPhase1" @onmouseover="OnHover1" @onmouseout="@(() => {OnLeave1(); OnLeave2();})">
+    <div class="product-list-panel @showPhase1" @ref="@b">
         <div class="product-list-panel1" @onmouseover="OnHover1" >
             <div class="option" @onmouseover="@(() => OnHover2(sub[0]))">Laptops</div>
             <div class="option" @onmouseover="@(() => OnHover2(sub[1]))">Macbooks</div>
@@ -17,12 +20,11 @@
             <div class="option" @onmouseover="@(() => OnHover2(sub[7]))">Office Devices</div>
             <div class="option" @onmouseover="@(() => OnHover2(sub[8]))">Network Devices</div>
         </div>
-        <div class="@showPhase2 product-list-panel2" @onmouseover="@(() => OnHover2(currentSub))"
-            @onmouseout="@(() => {OnLeave2();})">
+        <div class="@showPhase2 product-list-panel2" @ref="@c">
             @{
                 if(currentSub != null)
                     foreach(var i in currentSub){
-                        <div class="option">@i</div>
+                        <div class="option" @onclick="@(() => OnClick("Office Screens"))">@i</div>
                     }
             }
         </div>
@@ -33,6 +35,9 @@
 {
     private string showPhase1 = "hide";
     private string showPhase2 = "hide";
+    private ElementReference a;
+    private ElementReference b;
+    private ElementReference c;
     private List<string[]> sub = new List<string[]>(){
         new string[]{"Gaming Laptops", "Office Laptops"},
         new string[]{},
@@ -45,6 +50,10 @@
         new string[]{"Wifi Routers", "Wifi Cards"},
     };
     private string[] currentSub;
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await js.InvokeVoidAsync("FoldoutStyling", a, b, c);
+    }
     private void OnHover1()
     {
         showPhase1 = "show";
@@ -60,6 +69,11 @@
     }
     private void OnLeave2()
     {
+        showPhase2 = "hide";
+    }
+    private void OnClick(string url){
+        navManager.NavigateTo($"list/{url}");
+        showPhase1 = "hide";
         showPhase2 = "hide";
     }
 }

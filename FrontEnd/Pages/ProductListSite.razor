@@ -5,8 +5,8 @@
     <div class="main-component">
         <div class="filter">
             <p>Product Filter</p>
-            <FilterPanel filterMenu="@manufacturerSet" Name="Manufacturer"/>
-            <FilterPanel filterMenu="@priceSet" Name="Price"/>
+            <FilterPanel filterMenu="@manufacturerSet" Name="Manufacturer" ClickCallback="@filterAction" />
+            <FilterPanel filterMenu="@priceSet" Name="Price" ClickCallback="@filterAction" />
         </div>
 
         <div class="item-list">
@@ -27,14 +27,19 @@
         </div>
     </div>
 </div>
+
 @code {
     [Parameter]
     public string Id { get; set; }
     private List<ProductData> itemDatas = new();
-    private List<FilterDefinition<ProductData>> filterList = new();
+    private FilterDefinition<ProductData>[] filterList = {
+Builders<ProductData>.Filter.Empty,
+Builders<ProductData>.Filter.Empty
+};
     private IMongoCollection<ProductData> collection;
-    private HashSet<string> manufacturerSet = new();
-    private HashSet<string> priceSet = new();
+    private Dictionary<string, Expression<Func<ProductData, bool>>> manufacturerSet = new();
+    private Dictionary<string, Expression<Func<ProductData, bool>>> priceSet = new();
+    Action<Expression<Func<ProductData, bool>>> filterAction;
 
     private int currentPage = 1;
     private int allPage = 0;
@@ -46,17 +51,30 @@
         var db = client.GetDatabase("EcommerceSite");
         collection = db.GetCollection<ProductData>("Items");
 
+        filterAction = (m) =>
+        {
+            FilterAction(m);
+        };
+
         manufacturerSet = await GetManufacturers();
         priceSet = await GetPrice();
         var filter = Builders<ProductData>.Filter.Eq(m => m.Type, Id);
-        filterList.Add(filter);
-        var count = collection.CountDocuments(Builders<ProductData>.Filter.And(filterList));
-        allPage = (int)(count / itemsPerPage + 1);
+        filterList[0] = filter;
+
         await QueryItems(1);
+    }
+    private async Task CountPages()
+    {
+        var count = await collection.CountDocumentsAsync(Builders<ProductData>.Filter.And(filterList));
+        allPage = (int)(count / itemsPerPage + 1);
     }
     private async Task QueryItems(int page)
     {
-        var result = await collection.Find(Builders<ProductData>.Filter.And(filterList))
+        var operation = collection.Find(Builders<ProductData>.Filter.And(filterList));
+        var count = (await operation.ToListAsync()).Count;
+        allPage = (int)(count / itemsPerPage + 1);
+
+        var result = await operation
         .Limit(itemsPerPage)
         .Skip((page - 1) * itemsPerPage)
         .ToListAsync();
@@ -68,31 +86,60 @@
         await QueryItems(page);
         currentPage = page;
         StateHasChanged();
+
     }
-    private async Task<HashSet<string>> GetManufacturers()
+    private async Task<Dictionary<string, Expression<Func<ProductData, bool>>>> GetManufacturers()
     {
         var filter = Builders<ProductData>.Filter.Eq(m => m.Type, Id);
         var list = await collection.Find(filter).ToListAsync();
         HashSet<string> manufacturerSet = new();
+        Dictionary<string, Expression<Func<ProductData, bool>>> dict = new Dictionary<string, Expression<Func<ProductData,
+        bool>>>();
+
         foreach (var i in list)
         {
+            if (!dict.ContainsKey(i.Manufacturer)) dict.Add(i.Manufacturer, (p) => p.Manufacturer == i.Manufacturer);
             manufacturerSet.Add(i.Manufacturer);
         }
-        return manufacturerSet;
+        Console.WriteLine(dict["ViewSonic"]);
+        return dict;
     }
-    private async Task<HashSet<string>> GetPrice()
+    private async Task<Dictionary<string, Expression<Func<ProductData, bool>>>> GetPrice()
     {
-         var filter = Builders<ProductData>.Filter.Eq(m => m.Type, Id);
+        var filter = Builders<ProductData>.Filter.Eq(m => m.Type, Id);
         var list = await collection.Find(filter).ToListAsync();
         HashSet<string> res = new();
-        foreach(var i in list){
+        Dictionary<string, Expression<Func<ProductData, bool>>> dict = new Dictionary<string, Expression<Func<ProductData,
+        bool>>>();
+        foreach (var i in list)
+        {
             var price = i.Price;
-            if(price <= 1000000) res.Add("<= 1m");
-            if(price > 1000000 && price <= 3000000) res.Add("1m - 3m");
-            if(price > 3000000 && price <= 7000000) res.Add("3m - 7m");
-            if(price > 7000000) res.Add("> 7m");
-            
+            if (price <= 1000000 && !dict.ContainsKey("<= 1m"))
+            {
+                dict.Add("<= 1m", m => m.Price <= 1000000);
+            }
+            if (price > 1000000 && price <= 3000000 && !dict.ContainsKey("1m - 3m"))
+            {
+                dict.Add("1m - 3m", m => m.Price > 1000000 && m.Price <= 3000000);
+            }
+            if (price > 3000000 && price <= 7000000 && !dict.ContainsKey("3m - 7m"))
+            {
+                dict.Add("3m - 7m", m => m.Price > 3000000 && m.Price <= 7000000);
+            }
+            if (price > 7000000 && !dict.ContainsKey("<= 7m>"))
+            {
+                dict.Add("> 7m", m => m.Price > 7000000);
+            }
+
         }
-        return res;
+        return dict;
+    }
+    private async void FilterAction(Expression<Func<ProductData, bool>> m)
+    {
+        var filter = Builders<ProductData>.Filter.Where(m);
+        filterList[1] = filter;
+        await QueryItems(currentPage);
+        Console.WriteLine("clicked");
+        StateHasChanged();
     }
 }

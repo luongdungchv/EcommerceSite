@@ -16,6 +16,10 @@
 .p:hover[b-oa0dybiacu]{
     cursor:pointer;
 }
+.p:hover[b-oa0dybiacu], .option[b-oa0dybiacu]{
+    cursor:pointer;
+    color:green;
+}
 .product-list-panel[b-oa0dybiacu]{
     position:absolute;
     width:60vw;
