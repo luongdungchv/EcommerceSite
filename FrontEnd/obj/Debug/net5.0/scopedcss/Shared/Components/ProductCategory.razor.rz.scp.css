@@ -1,0 +1,5 @@
+.product-cate[b-el8tc2sxuq]{
+    display: grid;
+    gap:30px;
+    grid-template-columns: auto auto auto auto;
+}

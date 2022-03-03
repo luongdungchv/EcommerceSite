@@ -1,0 +1,65 @@
+<div class="sidebar">
+    <div class="sidebar-elem content">
+        <div class="p" @onmouseover="OnHover1" @onmouseout="OnLeave1">List of products</div>
+        <div class="p">Spec Build</div>
+        <div class="p">More</div>
+
+    </div>
+    <div class="product-list-panel @showPhase1" @onmouseover="OnHover1" @onmouseout="@(() => {OnLeave1(); OnLeave2();})">
+        <div class="product-list-panel1" @onmouseover="OnHover1" >
+            <div class="option" @onmouseover="@(() => OnHover2(sub[0]))">Laptops</div>
+            <div class="option" @onmouseover="@(() => OnHover2(sub[1]))">Macbooks</div>
+            <div class="option" @onmouseover="@(() => OnHover2(sub[2]))">PC Components</div>
+            <div class="option" @onmouseover="@(() => OnHover2(sub[3]))">Screens</div>
+            <div class="option" @onmouseover="@(() => OnHover2(sub[4]))">Gaming Gears</div>
+            <div class="option" @onmouseover="@(() => OnHover2(sub[5]))">Audios</div>
+            <div class="option" @onmouseover="@(() => OnHover2(sub[6]))">Accessories</div>
+            <div class="option" @onmouseover="@(() => OnHover2(sub[7]))">Office Devices</div>
+            <div class="option" @onmouseover="@(() => OnHover2(sub[8]))">Network Devices</div>
+        </div>
+        <div class="@showPhase2 product-list-panel2" @onmouseover="@(() => OnHover2(currentSub))"
+            @onmouseout="@(() => {OnLeave2();})">
+            @{
+                if(currentSub != null)
+                    foreach(var i in currentSub){
+                        <div class="option">@i</div>
+                    }
+            }
+        </div>
+    </div>
+
+</div>
+@code
+{
+    private string showPhase1 = "hide";
+    private string showPhase2 = "hide";
+    private List<string[]> sub = new List<string[]>(){
+        new string[]{"Gaming Laptops", "Office Laptops"},
+        new string[]{},
+        new string[]{"CPU", "VGA", "Mainboard", "SSD", "HDD", "Power Suppliers", "RAM", "Cases", "Combos"},
+        new string[]{"Gaming Screens", "Office Screens", "Designer Screens"},
+        new string[]{"Mechanical Keyboards", "Mousepads", "Microphones", "Gaming Mouses", "Table, Chairs", "Headphones", "Streaming Devices"},
+        new string[]{"Speakers", "Wireless Earbuds"},
+        new string[]{"Air Coolers", "AIO Coolers", "Cooler Fans", "Risers", "VGA Holders"},
+        new string[]{"Speakers", "Copyright Softwares", "Mouses, Keyboards", "Wireless mouse, keyboards", "Laser Printers", "Webcams", "USB Hubs"},
+        new string[]{"Wifi Routers", "Wifi Cards"},
+    };
+    private string[] currentSub;
+    private void OnHover1()
+    {
+        showPhase1 = "show";
+    }
+    private void OnLeave1()
+    {
+        showPhase1 = "hide";
+    }
+    private void OnHover2(string[] types)
+    {
+        currentSub = types;
+        showPhase2 = "show";
+    }
+    private void OnLeave2()
+    {
+        showPhase2 = "hide";
+    }
+}

@@ -1,0 +1,98 @@
+@page "/list/{Id}"
+@layout MainPageLayout
+<div class="product-list-site content">
+    <NavTree navigatorTree="@Category.GetTree(Id)" />
+    <div class="main-component">
+        <div class="filter">
+            <p>Product Filter</p>
+            <FilterPanel filterMenu="@manufacturerSet" Name="Manufacturer"/>
+            <FilterPanel filterMenu="@priceSet" Name="Price"/>
+        </div>
+
+        <div class="item-list">
+            <div class="item-grid">
+                @foreach (var i in itemDatas)
+                {
+                    <ProductBtn Data="@i" CustomStyle="width:100%" />
+                }
+            </div>
+            <div class="page-counter">
+                @for (var i = 1; i <= allPage; i++)
+                {
+                    string cls = i == currentPage ? "current" : "";
+                    int tmp = i;
+                    <div class="num @cls" @onclick="@(() => ChangePage(tmp))">@i</div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+@code {
+    [Parameter]
+    public string Id { get; set; }
+    private List<ProductData> itemDatas = new();
+    private List<FilterDefinition<ProductData>> filterList = new();
+    private IMongoCollection<ProductData> collection;
+    private HashSet<string> manufacturerSet = new();
+    private HashSet<string> priceSet = new();
+
+    private int currentPage = 1;
+    private int allPage = 0;
+    private int itemsPerPage = 15;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var client = new MongoClient("mongodb://127.0.0.1:27017");
+        var db = client.GetDatabase("EcommerceSite");
+        collection = db.GetCollection<ProductData>("Items");
+
+        manufacturerSet = await GetManufacturers();
+        priceSet = await GetPrice();
+        var filter = Builders<ProductData>.Filter.Eq(m => m.Type, Id);
+        filterList.Add(filter);
+        var count = collection.CountDocuments(Builders<ProductData>.Filter.And(filterList));
+        allPage = (int)(count / itemsPerPage + 1);
+        await QueryItems(1);
+    }
+    private async Task QueryItems(int page)
+    {
+        var result = await collection.Find(Builders<ProductData>.Filter.And(filterList))
+        .Limit(itemsPerPage)
+        .Skip((page - 1) * itemsPerPage)
+        .ToListAsync();
+        itemDatas = result;
+    }
+    private async void ChangePage(int page)
+    {
+        Console.WriteLine("page click");
+        await QueryItems(page);
+        currentPage = page;
+        StateHasChanged();
+    }
+    private async Task<HashSet<string>> GetManufacturers()
+    {
+        var filter = Builders<ProductData>.Filter.Eq(m => m.Type, Id);
+        var list = await collection.Find(filter).ToListAsync();
+        HashSet<string> manufacturerSet = new();
+        foreach (var i in list)
+        {
+            manufacturerSet.Add(i.Manufacturer);
+        }
+        return manufacturerSet;
+    }
+    private async Task<HashSet<string>> GetPrice()
+    {
+         var filter = Builders<ProductData>.Filter.Eq(m => m.Type, Id);
+        var list = await collection.Find(filter).ToListAsync();
+        HashSet<string> res = new();
+        foreach(var i in list){
+            var price = i.Price;
+            if(price <= 1000000) res.Add("<= 1m");
+            if(price > 1000000 && price <= 3000000) res.Add("1m - 3m");
+            if(price > 3000000 && price <= 7000000) res.Add("3m - 7m");
+            if(price > 7000000) res.Add("> 7m");
+            
+        }
+        return res;
+    }
+}

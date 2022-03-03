@@ -1,0 +1,16 @@
+<div class="filter-panel">
+    <p>@Name</p>
+    @foreach(var i in filterMenu){
+        <label class="filter-item">
+            <input type = "radio" name="items"/>
+            <div class="checkmark"></div>
+            <span class="text">@i</span>
+        </label>
+    }
+</div>
+@code{
+    [Parameter]
+    public HashSet<string> filterMenu{get;set;}
+    [Parameter]
+    public string Name{get;set;}
+}

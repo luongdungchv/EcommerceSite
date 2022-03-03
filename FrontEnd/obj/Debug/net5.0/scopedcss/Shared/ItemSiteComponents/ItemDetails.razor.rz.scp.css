@@ -1,0 +1,39 @@
+.item-detail[b-15rb3aabbb]{
+
+    
+}
+.menu[b-15rb3aabbb]{
+    display:flex;
+    color:white;
+    text-align: center;
+    align-items: center;
+    height:100%;
+    background-color:rgb(36, 36, 36);
+    margin-bottom: 25px;
+}
+.tab[b-15rb3aabbb]{
+    height:100%;
+    font-size: 20px;
+    font-weight: bold;
+    padding:5px 20px 5px 20px;
+    transition:background-color .5s;
+}
+.tab:hover[b-15rb3aabbb]{
+    cursor:pointer;
+    background-color:rgb(56, 56, 56);
+}
+.table-cell[b-15rb3aabbb]{
+    border:1px solid lightgray;
+    padding-left:10px;
+    color:white;
+}
+table[b-15rb3aabbb]{
+    margin:auto;
+    width:70%;
+}
+.value[b-15rb3aabbb]{
+    width:65%;
+}
+.key[b-15rb3aabbb]{
+    padding-right:10px;
+}

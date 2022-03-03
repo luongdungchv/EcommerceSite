@@ -1,0 +1,5 @@
+.product-cate{
+    display: grid;
+    gap:30px;
+    grid-template-columns: auto auto auto auto;
+}

@@ -1,0 +1,27 @@
+<div class="item-sum content">
+    <div class="img-display">
+        @if(data != null)
+        {
+            <ImgSlider SrcList="@data.Images" ImgWidth="100" ImgWidthUnit="%"/>
+        }
+    </div>
+    <div class="info">
+        @if(data != null){
+            <h2 class="name">@data.Name</h2>
+            foreach(var i in data.SummarySpecs){
+                var displayStr = "- " + i;
+                <h5>@displayStr</h5>
+            }
+            <h2 class="price">@data.GetPriceString()</h2>
+            <div class="buy-btn">
+                <span>BUY NOW</span>
+            </div>
+        }
+    </div>
+</div>
+@code{
+    [Parameter]
+    public ProductData data{get;set;}
+    private string[] imgSrcList => data.Images;
+    
+}

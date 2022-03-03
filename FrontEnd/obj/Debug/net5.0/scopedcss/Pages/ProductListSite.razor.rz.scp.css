@@ -1,0 +1,39 @@
+.main-component[b-xj49gjo6ci]{
+    display:flex;
+    gap:20px;
+}
+.item-list[b-xj49gjo6ci]{
+    width:75%;
+}
+.item-grid[b-xj49gjo6ci]{
+    display: grid;
+    width:100%;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 360px 360px 360px 360px;
+}
+.filter[b-xj49gjo6ci]{
+    width:25%;
+}
+.filter > p[b-xj49gjo6ci]{
+    color:white;
+    font-size: 15px;
+}
+.page-counter[b-xj49gjo6ci]{
+    background-color:red;
+    color:white;
+    display:flex;
+    justify-content: center;
+    gap:10px;
+}
+.page-counter > .num:hover[b-xj49gjo6ci]{
+    cursor:pointer;
+    text-decoration-line: underlined;
+    color:cyan;
+}
+.page-counter > .num[b-xj49gjo6ci]{
+    text-align:center;
+    width:2%;
+}
+.current[b-xj49gjo6ci]{
+    color:cyan;
+}

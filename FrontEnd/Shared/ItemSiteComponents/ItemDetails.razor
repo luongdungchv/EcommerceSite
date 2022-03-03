@@ -1,0 +1,49 @@
+<div class="item-detail content">
+    <div class="menu">
+        <div class="tab" @onclick="@(() => MenuClick(0))" style="@GetColor(0)">Device Details</div>
+        <div class="tab" @onclick="@(() => MenuClick(1))" style="@GetColor(1)">Device Specs</div>
+        <div class="tab" @onclick="@(() => MenuClick(2))" style="@GetColor(2)">Videos</div>
+        <div class="tab" @onclick="@(() => MenuClick(3))" style="@GetColor(3)">Product Reviews</div>
+    </div>
+    @if(currentSelection == 1){
+       
+        <table>
+            @foreach(var i in data.DetailSpecs){
+               <tr>
+                   <td class="table-cell key">@i.key</td>
+                   <td class="table-cell value">
+                       @foreach (var j in i.value)
+                       {
+                           <p>@j</p>
+                       }
+                   </td>
+               </tr>
+            }
+        </table>
+    }
+</div>
+@code{
+    [Parameter]
+    public ProductData data{get;set;}
+    List<bool> selectionStates = new(){false, false, false, false};
+    int currentSelection = 0;
+    protected override void OnInitialized()
+    {
+        
+    }
+    protected override void OnAfterRender(bool firstRender)
+    {
+        selectionStates.ForEach(n => Console.Write(n));
+    }
+    private void MenuClick(int index){
+        selectionStates.Clear();
+        selectionStates = new(){false, false, false, false};
+        selectionStates[index] = true;
+        currentSelection = index;
+        StateHasChanged();
+    }
+    private string GetColor(int index){
+        string res = selectionStates[index] ? "background-color:rgb(56, 56, 56);" : "";
+        return res;
+    }
+}

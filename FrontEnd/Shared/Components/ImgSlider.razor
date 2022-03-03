@@ -1,0 +1,94 @@
+<div class="slider-container">
+    <button id="next" @onclick = "NextBtnClick"><MatIcon Icon="keyboard_arrow_right"/></button>
+    <button id="previous" @onclick = "PreviousBtnClick"><MatIcon Icon="keyboard_arrow_left"/></button>
+    <div class="img-slider" style="@GenerateCSS()">
+        @{imgCount = 0;}
+        @foreach (var i in SrcList)
+        {
+            <div class="img-holder" style="left: @(position.ToString() + ImgWidthUnit.ToString());">
+                <img src="@i"/>
+            </div>
+            position += ImgWidth;
+            imgCount++;
+        }
+    </div>
+    <div class="indicator">
+        @if(imgState != null && imgState.Count > 0){
+            int j = 0;
+            Console.WriteLine("first");
+            foreach(var i in imgState){
+                //Console.WriteLine(i);
+                string active = i ? "active" : "";
+                var a = j;
+                <span class="dot @active" @onclick=@(() => ImgClick(a))></span>
+                j++;
+            }
+        }
+        else{
+            Console.WriteLine("second");
+            for(int i = 0; i < SrcList.Length; i++){
+                bool state = i == 0 ? true : false;
+                string active = state ? "active" : "";
+                var j = i;
+                <span class="dot @active" @onclick=@(() => ImgClick(j))></span>
+                imgState.Add(state);
+            }
+        }
+        
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string[] SrcList { get; set; }
+    [Parameter]
+    public float ImgWidth{get;set;}
+    [Parameter]
+    public string ImgWidthUnit{get;set;}
+    [Parameter]
+    public Action PrevBtnClickCallback{get;set;}
+    [Parameter]
+    public Action NextBtnClickCallback{get;set;}
+    private List<bool> imgState;
+    private float position = 0;
+    private int imgCount = 0;
+    private int imgCountTmp = 0;
+    private int currentImg = 0;
+    private string GenerateCSS(){
+        return $"right:{currentImg * ImgWidth}{ImgWidthUnit};transition:1s";
+    }
+    private void NextBtnClick(){
+        if(currentImg < imgCount - 1) ImgClick(currentImg + 1);
+        if(NextBtnClickCallback != null) NextBtnClickCallback();
+        Console.WriteLine(currentImg);
+    }
+    private void PreviousBtnClick(){
+        if(currentImg > 0) ImgClick(currentImg - 1);
+        if(PrevBtnClickCallback != null) PrevBtnClickCallback();
+
+    }
+    protected override void OnAfterRender(bool firstRender)
+    {
+        position = 0;
+        Console.WriteLine(imgCount);
+        if(firstRender) imgState[0] = true;
+        Console.WriteLine(imgCount);
+    }
+    protected override void OnInitialized()
+    {
+        imgState = new List<bool>();
+    }
+    private void ImgStateChange(){
+        imgState.ForEach(n => {
+            //if(n) 
+        });
+    }
+    private void ImgClick(int i){
+        for(int j = 0; j < imgState.Count; j++){
+            imgState[j] = false;
+        }
+        //imgState.ForEach(x => Console.WriteLine(x));
+        imgState[i] = true;
+        currentImg = i;
+    }
+}

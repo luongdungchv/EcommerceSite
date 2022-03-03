@@ -1,0 +1,32 @@
+.banner-title{
+    display:flex;
+    justify-content:center;
+    height:10px;
+    align-items: center;
+    background-color:lightgray;
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+.banner-text{
+    text-align: center;
+    color:white;
+    background-color: grey;
+    font-weight: bold;
+    font-size: 24px;
+    clip-path: polygon(5% 0, 0 100%, 100% 100%, 95% 0%);
+    padding-left:5%;
+    padding-right:5%;
+}
+/* .banner-text::after, .banner-text:before{
+    content:" ";
+    background-color:lightgray;
+    height:20px;
+    width:100%;
+    margin-top:6px;
+} */
+/* .banner-text::after{
+    clip-path: polygon(0 0, 5% 100%, 100% 100%, 100% 0);
+}
+.banner-text:before{
+    clip-path: polygon(0 0, 0 100%, 95% 100%, 100% 0);
+} */

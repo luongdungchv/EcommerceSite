@@ -1,0 +1,28 @@
+@inject NavigationManager navManager
+
+<div class="product-btn" style="@CustomStyle" @onclick="OnClick">
+    <div class="thumbnail">
+        <img src="https://www.tncstore.vn/image/cache/catalog/m%C3%A0n%20h%C3%ACnh%20msi/G27C5/man-hinh-gaming-msi-g27c5-1-228x228.png" alt="">
+    </div>
+    <div class="description">
+        <div class="name">@Data.Name</div>
+        <div class="rating">
+
+        </div>
+        <div class="product-price">
+            <span class="current-price">@Data.GetPriceString()</span>
+            <span class="base-price">@Data.GetBasePriceString()</span>
+        </div>
+    </div>
+</div>
+@code{
+    [Parameter]
+    public ProductData Data{get;set;}
+    [Parameter]
+    public int Position{get;set;}
+    [Parameter]
+    public string CustomStyle{get;set;}
+    private void OnClick(){
+        navManager.NavigateTo($"item/{Data.Id}");
+    }
+}

@@ -1,0 +1,17 @@
+.navigator-tree[b-b18t5fjbua]{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+span[b-b18t5fjbua]{
+    padding-right: 2%;
+    color:white;
+}
+[b-b18t5fjbua] .link{
+    padding-right: 2%;
+    color:white;
+    text-decoration-line: underline;
+}
+
+[b-b18t5fjbua] .link:hover{
+    color:lightgray;
+}

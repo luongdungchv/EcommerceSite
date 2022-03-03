@@ -1,0 +1,9 @@
+::deep .link{
+    padding-right: 2%;
+    color:white;
+    text-decoration-line: underline;
+}
+
+::deep .link:hover{
+    color:lightgray;
+}

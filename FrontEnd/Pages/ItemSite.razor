@@ -1,0 +1,27 @@
+@page "/item/{Id}"
+@layout MainPageLayout
+@using Newtonsoft.Json
+
+<div class="item-site">
+    <NavTree navigatorTree = "@navigatorTree"/>
+    <ItemSummary data="@data"/>
+    <BannerTitle Name="Product Infos"></BannerTitle>
+    <ItemDetails data = "@data"/>
+</div>
+
+@code {
+    [Parameter]
+    public string Id { get; set; }
+    private ProductData data;
+    private string dataStr = "";
+    private List<string> navigatorTree = new();
+    protected override async Task OnInitializedAsync()
+    {
+        var client = new MongoClient("mongodb://127.0.0.1:27017");
+        var db = client.GetDatabase("EcommerceSite");
+        var collection = db.GetCollection<ProductData>("Items");
+        var filter = Builders<ProductData>.Filter.Eq(m => m.Id, Id);
+        data = await collection.Find(filter).FirstOrDefaultAsync();
+        navigatorTree = Category.GetTree(data.Type);
+    }
+}

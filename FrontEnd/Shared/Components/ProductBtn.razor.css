@@ -1,0 +1,51 @@
+.product-btn{
+    height: 360px;
+    width: 25%;
+    background-color:rgb(218, 218, 218);
+    border:1px solid lightgray;
+    border-right: none;
+    cursor:pointer;
+}
+.name{
+    width:100%;
+    height:38%;
+    font-weight: bold;
+    margin-bottom:1%;
+    margin-left: 3%;
+    font-size: 15px;
+    overflow:hidden;  
+}
+.name:hover{
+    cursor:pointer;
+    text-decoration: underline;
+}
+.thumbnail{
+    width: 100%;
+    height: 66%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+img{
+    vertical-align:middle;
+}
+.description{
+    height: 34%;
+    width:100%;
+    background-color:white;
+    border-top:1px solid lightgray;
+}
+.product-price{
+    padding-left: 3%;
+}
+.current-price{
+    color:red;
+    font-size: 20px;
+    font-weight: bold;
+}
+.base-price{
+    color:gray;
+    text-decoration-line: line-through;
+    font-size: 15px;
+    margin-left: 5px;
+}

@@ -1,0 +1,10 @@
+<div class="navigator-tree content">
+        @foreach(var i in navigatorTree){
+            <NavLink class="link" href="/">@i</NavLink>
+            <span>/</span>
+        }
+</div>
+@code{
+    [Parameter]
+    public List<string> navigatorTree{get;set;}
+}

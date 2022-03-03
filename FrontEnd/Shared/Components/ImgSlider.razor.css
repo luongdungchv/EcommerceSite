@@ -1,0 +1,56 @@
+.img-slider{
+    height:80%;
+    padding:0px;
+    position:relative;
+}
+.img-holder{
+    height:100%;
+    width:100%;
+    position:absolute;
+    display:flex;
+    justify-content:center;
+}
+.img-holder > img{
+    vertical-align:middle;
+}
+
+button{
+    margin-top: 180px;
+    position: absolute;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(54, 54, 54);
+    opacity: 0.85;
+    color:white;
+    border: none;
+    padding:0;
+    line-height: 1.2;
+}
+button ::deep i{
+    line-height: 1.2;
+}
+#next{
+    right: 0;
+}
+#previous{
+    margin-left:0;
+}
+.dot{
+    background-color:rgb(59, 59, 59);
+    border-radius: 50%;
+    cursor: pointer;
+    width:15px;
+    height:15px;
+    display:block;
+    transition: background-color 0.6s;
+}
+.indicator{
+    padding-top:20px;
+    display:flex;
+    justify-content: center;
+    gap:20px;
+}
+.active{
+    background-color: lightgray;
+}

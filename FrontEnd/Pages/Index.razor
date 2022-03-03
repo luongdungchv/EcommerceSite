@@ -1,0 +1,26 @@
+@page "/"
+@layout MainPageLayout
+
+<div class="main-site">
+    <ImgSlider 
+           SrcList="@srcList" ImgWidth="@(73)" ImgWidthUnit="vw"/>
+    <BannerTitle Name="Product Categories"/>
+    <ProductCategory/>
+    <BannerTitle Name="Discounts"/>
+    <ProductDiscounts productDatas="@dataList"/>
+</div>
+@code
+{
+    private string[] srcList = {
+        "https://www.tncstore.vn/image/catalog/banner/2022/Thang1/Banner_Web_1650_660.png",
+        "https://www.tncstore.vn/image/catalog/banner/2021/thang%2011/Banner%201650x660%20-%202.png",
+        "https://www.tncstore.vn/image/catalog/banner/2021/thang%2011/Banner%201650x660%20-%203.png"
+    };
+    private ProductData[] dataList = {
+        new ProductData("Something called a computer", 7000000, 6000000),    
+        new ProductData("Something called a computer", 7000000, 6000000),
+        new ProductData("Something called a computer", 7000000, 6000000),
+        new ProductData("Something called a computer", 7000000, 6000000),
+        new ProductData("Something called a computer", 7000000, 6000000),
+    };
+}

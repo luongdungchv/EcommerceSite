@@ -1,0 +1,48 @@
+.item-sum{
+    position:relative;
+    display:flex;
+    gap:30px;
+}
+.img-display{
+    position:relative;
+    width:50%;
+}
+.item-sum ::deep .slider-container{
+    width:100%;
+    position:relative;
+    overflow:hidden;
+    height:500px;
+
+}
+.item-sum ::deep .slider-container > .img-slider > .img-holder{
+    background-color:white;
+}
+.name{
+    color:white;
+    font-weight: bold;
+}
+.price{
+    color:#de2929;
+    font-weight:bold;
+    position:relative;
+    margin-bottom: 0.5rem;
+    text-align: right;
+}
+.buy-btn{
+    width: 200px;
+    color:white;
+    background-color:rgb(0, 119, 255);
+    right:0;
+    text-align: center;
+    vertical-align:middle;
+    font-weight: bold;
+    padding-top:15px;
+    padding-bottom:15px;
+    margin-left:auto;
+}
+
+h5{
+    color:white;
+    font-size: 1.15rem;
+    margin-bottom: 0.7rem;
+}

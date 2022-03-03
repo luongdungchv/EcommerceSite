@@ -1,0 +1,17 @@
+<div class="product-discount content">
+    @{
+        int px = 0;
+        foreach(var i in productDatas){
+            <ProductBtn Data="@i" CustomStyle="@(CustomBtnStyle(px))"/>;
+            px += 25;
+        }
+    }
+</div>
+@code{
+    [Parameter]
+    public ProductData[] productDatas{get;set;}
+    
+    private string CustomBtnStyle(int px){
+        return $"position:absolute;left:{px}%";
+    }
+}

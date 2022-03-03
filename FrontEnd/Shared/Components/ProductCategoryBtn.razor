@@ -1,0 +1,12 @@
+<div class="product-cate-btn">
+    <span>Something written here</span>
+    <div class="banner-color" style="background-color: @(Color)">
+    </div>
+    <img src="@ImgSrc" alt="">
+</div>
+@code{
+    [Parameter]
+    public string Color {get;set;}
+    [Parameter]
+    public string ImgSrc {get;set;}
+}

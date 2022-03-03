@@ -1,0 +1,17 @@
+.navigator-tree{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+span{
+    padding-right: 2%;
+    color:white;
+}
+::deep .link{
+    padding-right: 2%;
+    color:white;
+    text-decoration-line: underline;
+}
+
+::deep .link:hover{
+    color:lightgray;
+}

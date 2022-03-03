@@ -1,0 +1,8 @@
+.main-site ::deep .slider-container{
+    padding:0px;
+    margin:auto;
+    width:73vw;
+    overflow:hidden;
+    position: relative;
+    height:500px;
+}

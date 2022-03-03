@@ -1,0 +1,9 @@
+[b-s12hx1azxv] .link{
+    padding-right: 2%;
+    color:white;
+    text-decoration-line: underline;
+}
+
+[b-s12hx1azxv] .link:hover{
+    color:lightgray;
+}

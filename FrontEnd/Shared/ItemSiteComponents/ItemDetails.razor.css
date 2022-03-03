@@ -1,0 +1,39 @@
+.item-detail{
+
+    
+}
+.menu{
+    display:flex;
+    color:white;
+    text-align: center;
+    align-items: center;
+    height:100%;
+    background-color:rgb(36, 36, 36);
+    margin-bottom: 25px;
+}
+.tab{
+    height:100%;
+    font-size: 20px;
+    font-weight: bold;
+    padding:5px 20px 5px 20px;
+    transition:background-color .5s;
+}
+.tab:hover{
+    cursor:pointer;
+    background-color:rgb(56, 56, 56);
+}
+.table-cell{
+    border:1px solid lightgray;
+    padding-left:10px;
+    color:white;
+}
+table{
+    margin:auto;
+    width:70%;
+}
+.value{
+    width:65%;
+}
+.key{
+    padding-right:10px;
+}

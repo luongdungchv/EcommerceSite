@@ -1,0 +1,40 @@
+.filter-panel[b-90w05fdzij]{
+    padding-top:20px;
+}
+
+.filter-item[b-90w05fdzij]{
+    margin-left:5%;
+    display:flex;
+    color:white;
+    padding-top:10px;
+    padding-bottom: 10px;
+    cursor:pointer;
+}
+.filter-item:hover > .checkmark[b-90w05fdzij]{
+    background-color:lightgray;
+}
+.checkmark[b-90w05fdzij]{
+    width:25px;
+    height:25px;
+    background-color:white;
+    margin-right:10px
+}
+
+.filter-item > input[b-90w05fdzij]{
+    opacity:0;
+    width:0;
+    height:0;
+}
+.filter-item > input:checked ~ .checkmark[b-90w05fdzij]{
+    background-color:rgb(0, 191, 255);
+}
+.filter-panel[b-90w05fdzij]{
+    background-color:rgb(36, 36, 36);
+}
+p[b-90w05fdzij]{
+    font-size:20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color:white;
+    margin-left:5%;
+}

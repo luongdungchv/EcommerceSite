@@ -1,0 +1,39 @@
+.main-component{
+    display:flex;
+    gap:20px;
+}
+.item-list{
+    width:75%;
+}
+.item-grid{
+    display: grid;
+    width:100%;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 360px 360px 360px 360px;
+}
+.filter{
+    width:25%;
+}
+.filter > p{
+    color:white;
+    font-size: 15px;
+}
+.page-counter{
+    background-color:red;
+    color:white;
+    display:flex;
+    justify-content: center;
+    gap:10px;
+}
+.page-counter > .num:hover{
+    cursor:pointer;
+    text-decoration-line: underlined;
+    color:cyan;
+}
+.page-counter > .num{
+    text-align:center;
+    width:2%;
+}
+.current{
+    color:cyan;
+}
