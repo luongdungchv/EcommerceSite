@@ -1,5 +1,5 @@
 {
-  "FilePath": "d:\\MyProjects\\VScode Projects\\EcommerceSite\\FrontEnd\\FrontEnd.csproj",
+  "FilePath": "d:\\MyProjects\\Github\\EcommerceSite\\FrontEnd\\FrontEnd.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -11,6 +11,59 @@
   },
   "ProjectWorkspaceState": {
     "TagHelpers": [
+      {
+        "HashCode": 901435773,
+        "Kind": "Components.Component",
+        "Name": "FrontEnd.Pages.ProductListSite",
+        "AssemblyName": "FrontEnd",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ProductListSite"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Id",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Id"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "FrontEnd.Pages.ProductListSite"
+        }
+      },
+      {
+        "HashCode": 1932784014,
+        "Kind": "Components.Component",
+        "Name": "FrontEnd.Pages.ProductListSite",
+        "AssemblyName": "FrontEnd",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "FrontEnd.Pages.ProductListSite"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Id",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Id"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "FrontEnd.Pages.ProductListSite",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
       {
         "HashCode": 1886944900,
         "Kind": "Components.Component",
@@ -78,125 +131,6 @@
         }
       },
       {
-        "HashCode": -643500211,
-        "Kind": "Components.Component",
-        "Name": "FrontEnd.Pages.Slider",
-        "AssemblyName": "FrontEnd",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Slider"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "FrontEnd.Pages.Slider"
-        }
-      },
-      {
-        "HashCode": -100612344,
-        "Kind": "Components.Component",
-        "Name": "FrontEnd.Pages.Slider",
-        "AssemblyName": "FrontEnd",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "FrontEnd.Pages.Slider"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "FrontEnd.Pages.Slider",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 220839233,
-        "Kind": "Components.Component",
-        "Name": "FrontEnd.Pages.Index",
-        "AssemblyName": "FrontEnd",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "FrontEnd.Pages.Index"
-        }
-      },
-      {
-        "HashCode": 1216775559,
-        "Kind": "Components.Component",
-        "Name": "FrontEnd.Pages.Index",
-        "AssemblyName": "FrontEnd",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "FrontEnd.Pages.Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "FrontEnd.Pages.Index",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 901435773,
-        "Kind": "Components.Component",
-        "Name": "FrontEnd.Pages.ProductListSite",
-        "AssemblyName": "FrontEnd",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ProductListSite"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Id",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Id"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "FrontEnd.Pages.ProductListSite"
-        }
-      },
-      {
-        "HashCode": 1932784014,
-        "Kind": "Components.Component",
-        "Name": "FrontEnd.Pages.ProductListSite",
-        "AssemblyName": "FrontEnd",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "FrontEnd.Pages.ProductListSite"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Id",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Id"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "FrontEnd.Pages.ProductListSite",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -742676211,
         "Kind": "Components.Component",
         "Name": "FrontEnd.Pages.ItemSite",
@@ -250,184 +184,206 @@
         }
       },
       {
-        "HashCode": 1761449821,
+        "HashCode": 220839233,
         "Kind": "Components.Component",
-        "Name": "FrontEnd.App",
+        "Name": "FrontEnd.Pages.Index",
         "AssemblyName": "FrontEnd",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "App"
+            "TagName": "Index"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "FrontEnd.App"
+          "Common.TypeName": "FrontEnd.Pages.Index"
         }
       },
       {
-        "HashCode": 1267704896,
+        "HashCode": 1216775559,
         "Kind": "Components.Component",
-        "Name": "FrontEnd.App",
+        "Name": "FrontEnd.Pages.Index",
         "AssemblyName": "FrontEnd",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "FrontEnd.App"
+            "TagName": "FrontEnd.Pages.Index"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "FrontEnd.App",
+          "Common.TypeName": "FrontEnd.Pages.Index",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
       {
-        "HashCode": 1065756950,
+        "HashCode": -643500211,
         "Kind": "Components.Component",
-        "Name": "FrontEnd.Shared.MainPageLayout",
+        "Name": "FrontEnd.Pages.Slider",
         "AssemblyName": "FrontEnd",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "MainPageLayout"
+            "TagName": "Slider"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "FrontEnd.Pages.Slider"
+        }
+      },
+      {
+        "HashCode": -100612344,
+        "Kind": "Components.Component",
+        "Name": "FrontEnd.Pages.Slider",
+        "AssemblyName": "FrontEnd",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "FrontEnd.Pages.Slider"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "FrontEnd.Pages.Slider",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -261513252,
+        "Kind": "Components.Component",
+        "Name": "FrontEnd.Shared.Components.ProductDiscounts",
+        "AssemblyName": "FrontEnd",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ProductDiscounts"
           }
         ],
         "BoundAttributes": [
           {
             "Kind": "Components.Component",
-            "Name": "Body",
-            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
-            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+            "Name": "productDatas",
+            "TypeName": "ProductData[]",
             "Metadata": {
-              "Common.PropertyName": "Body",
-              "Components.ChildContent": "True"
+              "Common.PropertyName": "productDatas"
             }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "FrontEnd.Shared.MainPageLayout"
+          "Common.TypeName": "FrontEnd.Shared.Components.ProductDiscounts"
         }
       },
       {
-        "HashCode": 2077988073,
+        "HashCode": -1157994352,
         "Kind": "Components.Component",
-        "Name": "FrontEnd.Shared.MainPageLayout",
+        "Name": "FrontEnd.Shared.Components.ProductDiscounts",
         "AssemblyName": "FrontEnd",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "FrontEnd.Shared.MainPageLayout"
+            "TagName": "FrontEnd.Shared.Components.ProductDiscounts"
           }
         ],
         "BoundAttributes": [
           {
             "Kind": "Components.Component",
-            "Name": "Body",
-            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
-            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+            "Name": "productDatas",
+            "TypeName": "ProductData[]",
             "Metadata": {
-              "Common.PropertyName": "Body",
-              "Components.ChildContent": "True"
+              "Common.PropertyName": "productDatas"
             }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "FrontEnd.Shared.MainPageLayout",
+          "Common.TypeName": "FrontEnd.Shared.Components.ProductDiscounts",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
       {
-        "HashCode": -1914534887,
-        "Kind": "Components.ChildContent",
-        "Name": "FrontEnd.Shared.MainPageLayout.Body",
-        "AssemblyName": "FrontEnd",
-        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Body",
-            "ParentTag": "MainPageLayout"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.None",
-          "Common.TypeName": "FrontEnd.Shared.MainPageLayout.Body",
-          "Components.IsSpecialKind": "Components.ChildContent"
-        }
-      },
-      {
-        "HashCode": 162835352,
-        "Kind": "Components.ChildContent",
-        "Name": "FrontEnd.Shared.MainPageLayout.Body",
-        "AssemblyName": "FrontEnd",
-        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Body",
-            "ParentTag": "FrontEnd.Shared.MainPageLayout"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.None",
-          "Common.TypeName": "FrontEnd.Shared.MainPageLayout.Body",
-          "Components.IsSpecialKind": "Components.ChildContent",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -1599139447,
+        "HashCode": 1172425487,
         "Kind": "Components.Component",
-        "Name": "FrontEnd.Shared.SurveyPrompt",
+        "Name": "FrontEnd.Shared.Components.ProductBtn",
         "AssemblyName": "FrontEnd",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "SurveyPrompt"
+            "TagName": "ProductBtn"
           }
         ],
         "BoundAttributes": [
           {
             "Kind": "Components.Component",
-            "Name": "Title",
+            "Name": "Data",
+            "TypeName": "ProductData",
+            "Metadata": {
+              "Common.PropertyName": "Data"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Position",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "Position"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "CustomStyle",
             "TypeName": "System.String",
             "Metadata": {
-              "Common.PropertyName": "Title"
+              "Common.PropertyName": "CustomStyle"
             }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "FrontEnd.Shared.SurveyPrompt"
+          "Common.TypeName": "FrontEnd.Shared.Components.ProductBtn"
         }
       },
       {
-        "HashCode": -355915121,
+        "HashCode": 926081003,
         "Kind": "Components.Component",
-        "Name": "FrontEnd.Shared.SurveyPrompt",
+        "Name": "FrontEnd.Shared.Components.ProductBtn",
         "AssemblyName": "FrontEnd",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "FrontEnd.Shared.SurveyPrompt"
+            "TagName": "FrontEnd.Shared.Components.ProductBtn"
           }
         ],
         "BoundAttributes": [
           {
             "Kind": "Components.Component",
-            "Name": "Title",
+            "Name": "Data",
+            "TypeName": "ProductData",
+            "Metadata": {
+              "Common.PropertyName": "Data"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Position",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "Position"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "CustomStyle",
             "TypeName": "System.String",
             "Metadata": {
-              "Common.PropertyName": "Title"
+              "Common.PropertyName": "CustomStyle"
             }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "FrontEnd.Shared.SurveyPrompt",
+          "Common.TypeName": "FrontEnd.Shared.Components.ProductBtn",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -514,6 +470,194 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "FrontEnd.Shared.Components.HeaderElement",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1254330413,
+        "Kind": "Components.Component",
+        "Name": "FrontEnd.Shared.Components.Sidebar",
+        "AssemblyName": "FrontEnd",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Sidebar"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "FrontEnd.Shared.Components.Sidebar"
+        }
+      },
+      {
+        "HashCode": -1866515810,
+        "Kind": "Components.Component",
+        "Name": "FrontEnd.Shared.Components.Sidebar",
+        "AssemblyName": "FrontEnd",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "FrontEnd.Shared.Components.Sidebar"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "FrontEnd.Shared.Components.Sidebar",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1465585211,
+        "Kind": "Components.Component",
+        "Name": "FrontEnd.Shared.Components.ProductCategoryBtn",
+        "AssemblyName": "FrontEnd",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ProductCategoryBtn"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Color",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Color"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "ImgSrc",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "ImgSrc"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "FrontEnd.Shared.Components.ProductCategoryBtn"
+        }
+      },
+      {
+        "HashCode": -1958346459,
+        "Kind": "Components.Component",
+        "Name": "FrontEnd.Shared.Components.ProductCategoryBtn",
+        "AssemblyName": "FrontEnd",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "FrontEnd.Shared.Components.ProductCategoryBtn"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Color",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Color"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "ImgSrc",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "ImgSrc"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "FrontEnd.Shared.Components.ProductCategoryBtn",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -13666810,
+        "Kind": "Components.Component",
+        "Name": "FrontEnd.Shared.Components.NavTree",
+        "AssemblyName": "FrontEnd",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NavTree"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "navigatorTree",
+            "TypeName": "System.Collections.Generic.List<System.String>",
+            "Metadata": {
+              "Common.PropertyName": "navigatorTree"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "FrontEnd.Shared.Components.NavTree"
+        }
+      },
+      {
+        "HashCode": -1782477036,
+        "Kind": "Components.Component",
+        "Name": "FrontEnd.Shared.Components.NavTree",
+        "AssemblyName": "FrontEnd",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "FrontEnd.Shared.Components.NavTree"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "navigatorTree",
+            "TypeName": "System.Collections.Generic.List<System.String>",
+            "Metadata": {
+              "Common.PropertyName": "navigatorTree"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "FrontEnd.Shared.Components.NavTree",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1728700320,
+        "Kind": "Components.Component",
+        "Name": "FrontEnd.Shared.Components.ProductCategory",
+        "AssemblyName": "FrontEnd",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ProductCategory"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "FrontEnd.Shared.Components.ProductCategory"
+        }
+      },
+      {
+        "HashCode": -1291776203,
+        "Kind": "Components.Component",
+        "Name": "FrontEnd.Shared.Components.ProductCategory",
+        "AssemblyName": "FrontEnd",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "FrontEnd.Shared.Components.ProductCategory"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "FrontEnd.Shared.Components.ProductCategory",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -639,361 +783,151 @@
         }
       },
       {
-        "HashCode": -13666810,
+        "HashCode": -1599139447,
         "Kind": "Components.Component",
-        "Name": "FrontEnd.Shared.Components.NavTree",
+        "Name": "FrontEnd.Shared.SurveyPrompt",
         "AssemblyName": "FrontEnd",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "NavTree"
+            "TagName": "SurveyPrompt"
           }
         ],
         "BoundAttributes": [
           {
             "Kind": "Components.Component",
-            "Name": "navigatorTree",
-            "TypeName": "System.Collections.Generic.List<System.String>",
+            "Name": "Title",
+            "TypeName": "System.String",
             "Metadata": {
-              "Common.PropertyName": "navigatorTree"
+              "Common.PropertyName": "Title"
             }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "FrontEnd.Shared.Components.NavTree"
+          "Common.TypeName": "FrontEnd.Shared.SurveyPrompt"
         }
       },
       {
-        "HashCode": -1782477036,
+        "HashCode": -355915121,
         "Kind": "Components.Component",
-        "Name": "FrontEnd.Shared.Components.NavTree",
+        "Name": "FrontEnd.Shared.SurveyPrompt",
         "AssemblyName": "FrontEnd",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "FrontEnd.Shared.Components.NavTree"
+            "TagName": "FrontEnd.Shared.SurveyPrompt"
           }
         ],
         "BoundAttributes": [
           {
             "Kind": "Components.Component",
-            "Name": "navigatorTree",
-            "TypeName": "System.Collections.Generic.List<System.String>",
+            "Name": "Title",
+            "TypeName": "System.String",
             "Metadata": {
-              "Common.PropertyName": "navigatorTree"
+              "Common.PropertyName": "Title"
             }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "FrontEnd.Shared.Components.NavTree",
+          "Common.TypeName": "FrontEnd.Shared.SurveyPrompt",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
       {
-        "HashCode": -1728700320,
+        "HashCode": 1065756950,
         "Kind": "Components.Component",
-        "Name": "FrontEnd.Shared.Components.ProductCategory",
+        "Name": "FrontEnd.Shared.MainPageLayout",
         "AssemblyName": "FrontEnd",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ProductCategory"
+            "TagName": "MainPageLayout"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Body",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Body",
+              "Components.ChildContent": "True"
+            }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "FrontEnd.Shared.Components.ProductCategory"
+          "Common.TypeName": "FrontEnd.Shared.MainPageLayout"
         }
       },
       {
-        "HashCode": -1291776203,
+        "HashCode": 2077988073,
         "Kind": "Components.Component",
-        "Name": "FrontEnd.Shared.Components.ProductCategory",
+        "Name": "FrontEnd.Shared.MainPageLayout",
         "AssemblyName": "FrontEnd",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "FrontEnd.Shared.Components.ProductCategory"
+            "TagName": "FrontEnd.Shared.MainPageLayout"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Body",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Body",
+              "Components.ChildContent": "True"
+            }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "FrontEnd.Shared.Components.ProductCategory",
+          "Common.TypeName": "FrontEnd.Shared.MainPageLayout",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
       {
-        "HashCode": 1465585211,
-        "Kind": "Components.Component",
-        "Name": "FrontEnd.Shared.Components.ProductCategoryBtn",
+        "HashCode": -1914534887,
+        "Kind": "Components.ChildContent",
+        "Name": "FrontEnd.Shared.MainPageLayout.Body",
         "AssemblyName": "FrontEnd",
+        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ProductCategoryBtn"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Color",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Color"
-            }
-          },
-          {
-            "Kind": "Components.Component",
-            "Name": "ImgSrc",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "ImgSrc"
-            }
+            "TagName": "Body",
+            "ParentTag": "MainPageLayout"
           }
         ],
         "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "FrontEnd.Shared.Components.ProductCategoryBtn"
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "FrontEnd.Shared.MainPageLayout.Body",
+          "Components.IsSpecialKind": "Components.ChildContent"
         }
       },
       {
-        "HashCode": -1958346459,
-        "Kind": "Components.Component",
-        "Name": "FrontEnd.Shared.Components.ProductCategoryBtn",
+        "HashCode": 162835352,
+        "Kind": "Components.ChildContent",
+        "Name": "FrontEnd.Shared.MainPageLayout.Body",
         "AssemblyName": "FrontEnd",
+        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "FrontEnd.Shared.Components.ProductCategoryBtn"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Color",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Color"
-            }
-          },
-          {
-            "Kind": "Components.Component",
-            "Name": "ImgSrc",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "ImgSrc"
-            }
+            "TagName": "Body",
+            "ParentTag": "FrontEnd.Shared.MainPageLayout"
           }
         ],
         "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "FrontEnd.Shared.Components.ProductCategoryBtn",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1254330413,
-        "Kind": "Components.Component",
-        "Name": "FrontEnd.Shared.Components.Sidebar",
-        "AssemblyName": "FrontEnd",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Sidebar"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "FrontEnd.Shared.Components.Sidebar"
-        }
-      },
-      {
-        "HashCode": -1866515810,
-        "Kind": "Components.Component",
-        "Name": "FrontEnd.Shared.Components.Sidebar",
-        "AssemblyName": "FrontEnd",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "FrontEnd.Shared.Components.Sidebar"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "FrontEnd.Shared.Components.Sidebar",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1172425487,
-        "Kind": "Components.Component",
-        "Name": "FrontEnd.Shared.Components.ProductBtn",
-        "AssemblyName": "FrontEnd",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ProductBtn"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Data",
-            "TypeName": "ProductData",
-            "Metadata": {
-              "Common.PropertyName": "Data"
-            }
-          },
-          {
-            "Kind": "Components.Component",
-            "Name": "Position",
-            "TypeName": "System.Int32",
-            "Metadata": {
-              "Common.PropertyName": "Position"
-            }
-          },
-          {
-            "Kind": "Components.Component",
-            "Name": "CustomStyle",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "CustomStyle"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "FrontEnd.Shared.Components.ProductBtn"
-        }
-      },
-      {
-        "HashCode": 926081003,
-        "Kind": "Components.Component",
-        "Name": "FrontEnd.Shared.Components.ProductBtn",
-        "AssemblyName": "FrontEnd",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "FrontEnd.Shared.Components.ProductBtn"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Data",
-            "TypeName": "ProductData",
-            "Metadata": {
-              "Common.PropertyName": "Data"
-            }
-          },
-          {
-            "Kind": "Components.Component",
-            "Name": "Position",
-            "TypeName": "System.Int32",
-            "Metadata": {
-              "Common.PropertyName": "Position"
-            }
-          },
-          {
-            "Kind": "Components.Component",
-            "Name": "CustomStyle",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "CustomStyle"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "FrontEnd.Shared.Components.ProductBtn",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -261513252,
-        "Kind": "Components.Component",
-        "Name": "FrontEnd.Shared.Components.ProductDiscounts",
-        "AssemblyName": "FrontEnd",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ProductDiscounts"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "productDatas",
-            "TypeName": "ProductData[]",
-            "Metadata": {
-              "Common.PropertyName": "productDatas"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "FrontEnd.Shared.Components.ProductDiscounts"
-        }
-      },
-      {
-        "HashCode": -1157994352,
-        "Kind": "Components.Component",
-        "Name": "FrontEnd.Shared.Components.ProductDiscounts",
-        "AssemblyName": "FrontEnd",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "FrontEnd.Shared.Components.ProductDiscounts"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "productDatas",
-            "TypeName": "ProductData[]",
-            "Metadata": {
-              "Common.PropertyName": "productDatas"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "FrontEnd.Shared.Components.ProductDiscounts",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -996270256,
-        "Kind": "Components.Component",
-        "Name": "FrontEnd.Shared.NavMenu",
-        "AssemblyName": "FrontEnd",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "FrontEnd.Shared.NavMenu"
-        }
-      },
-      {
-        "HashCode": -589081935,
-        "Kind": "Components.Component",
-        "Name": "FrontEnd.Shared.NavMenu",
-        "AssemblyName": "FrontEnd",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "FrontEnd.Shared.NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "FrontEnd.Shared.NavMenu",
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "FrontEnd.Shared.MainPageLayout.Body",
+          "Components.IsSpecialKind": "Components.ChildContent",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -1090,75 +1024,6 @@
           "Runtime.Name": "Components.None",
           "Common.TypeName": "FrontEnd.Shared.MainLayout.Body",
           "Components.IsSpecialKind": "Components.ChildContent",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 6665575,
-        "Kind": "Components.Component",
-        "Name": "FrontEnd.Shared.ProductListSite.FilterPanel",
-        "AssemblyName": "FrontEnd",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "FilterPanel"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "filterMenu",
-            "TypeName": "System.Collections.Generic.HashSet<System.String>",
-            "Metadata": {
-              "Common.PropertyName": "filterMenu"
-            }
-          },
-          {
-            "Kind": "Components.Component",
-            "Name": "Name",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Name"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "FrontEnd.Shared.ProductListSite.FilterPanel"
-        }
-      },
-      {
-        "HashCode": -1226884886,
-        "Kind": "Components.Component",
-        "Name": "FrontEnd.Shared.ProductListSite.FilterPanel",
-        "AssemblyName": "FrontEnd",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "FrontEnd.Shared.ProductListSite.FilterPanel"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "filterMenu",
-            "TypeName": "System.Collections.Generic.HashSet<System.String>",
-            "Metadata": {
-              "Common.PropertyName": "filterMenu"
-            }
-          },
-          {
-            "Kind": "Components.Component",
-            "Name": "Name",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Name"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "FrontEnd.Shared.ProductListSite.FilterPanel",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -1265,6 +1130,141 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "FrontEnd.Shared.ItemSiteComponents.ItemSummary",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -996270256,
+        "Kind": "Components.Component",
+        "Name": "FrontEnd.Shared.NavMenu",
+        "AssemblyName": "FrontEnd",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "FrontEnd.Shared.NavMenu"
+        }
+      },
+      {
+        "HashCode": -589081935,
+        "Kind": "Components.Component",
+        "Name": "FrontEnd.Shared.NavMenu",
+        "AssemblyName": "FrontEnd",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "FrontEnd.Shared.NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "FrontEnd.Shared.NavMenu",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 6665575,
+        "Kind": "Components.Component",
+        "Name": "FrontEnd.Shared.ProductListSite.FilterPanel",
+        "AssemblyName": "FrontEnd",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "FilterPanel"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "filterMenu",
+            "TypeName": "System.Collections.Generic.HashSet<System.String>",
+            "Metadata": {
+              "Common.PropertyName": "filterMenu"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Name",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Name"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "FrontEnd.Shared.ProductListSite.FilterPanel"
+        }
+      },
+      {
+        "HashCode": -1226884886,
+        "Kind": "Components.Component",
+        "Name": "FrontEnd.Shared.ProductListSite.FilterPanel",
+        "AssemblyName": "FrontEnd",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "FrontEnd.Shared.ProductListSite.FilterPanel"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "filterMenu",
+            "TypeName": "System.Collections.Generic.HashSet<System.String>",
+            "Metadata": {
+              "Common.PropertyName": "filterMenu"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Name",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Name"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "FrontEnd.Shared.ProductListSite.FilterPanel",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1761449821,
+        "Kind": "Components.Component",
+        "Name": "FrontEnd.App",
+        "AssemblyName": "FrontEnd",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "FrontEnd.App"
+        }
+      },
+      {
+        "HashCode": 1267704896,
+        "Kind": "Components.Component",
+        "Name": "FrontEnd.App",
+        "AssemblyName": "FrontEnd",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "FrontEnd.App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "FrontEnd.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -76452,133 +76452,133 @@
   "RootNamespace": "FrontEnd",
   "Documents": [
     {
-      "FilePath": "d:\\MyProjects\\VScode Projects\\EcommerceSite\\FrontEnd\\Shared\\Components\\ImgSlider.razor",
-      "TargetPath": "Shared\\Components\\ImgSlider.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\MyProjects\\VScode Projects\\EcommerceSite\\FrontEnd\\Shared\\ProductListSite\\FilterPanel.razor",
-      "TargetPath": "Shared\\ProductListSite\\FilterPanel.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\MyProjects\\VScode Projects\\EcommerceSite\\FrontEnd\\Shared\\Components\\BannerTitle.razor",
-      "TargetPath": "Shared\\Components\\BannerTitle.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\MyProjects\\VScode Projects\\EcommerceSite\\FrontEnd\\Shared\\Components\\NavTree.razor",
-      "TargetPath": "Shared\\Components\\NavTree.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\MyProjects\\VScode Projects\\EcommerceSite\\FrontEnd\\App.razor",
-      "TargetPath": "App.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\MyProjects\\VScode Projects\\EcommerceSite\\FrontEnd\\Pages\\_Host.cshtml",
-      "TargetPath": "Pages\\_Host.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\MyProjects\\VScode Projects\\EcommerceSite\\FrontEnd\\Shared\\ItemSiteComponents\\ItemDetails.razor",
-      "TargetPath": "Shared\\ItemSiteComponents\\ItemDetails.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\MyProjects\\VScode Projects\\EcommerceSite\\FrontEnd\\Shared\\MainPageLayout.razor",
-      "TargetPath": "Shared\\MainPageLayout.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\MyProjects\\VScode Projects\\EcommerceSite\\FrontEnd\\Pages\\Counter.razor",
-      "TargetPath": "Pages\\Counter.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\MyProjects\\VScode Projects\\EcommerceSite\\FrontEnd\\Shared\\Components\\Sidebar.razor",
-      "TargetPath": "Shared\\Components\\Sidebar.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\MyProjects\\VScode Projects\\EcommerceSite\\FrontEnd\\Pages\\ProductListSite.razor",
-      "TargetPath": "Pages\\ProductListSite.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\MyProjects\\VScode Projects\\EcommerceSite\\FrontEnd\\Shared\\Components\\ProductCategoryBtn.razor",
-      "TargetPath": "Shared\\Components\\ProductCategoryBtn.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\MyProjects\\VScode Projects\\EcommerceSite\\FrontEnd\\Shared\\Components\\ProductCategory.razor",
-      "TargetPath": "Shared\\Components\\ProductCategory.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\MyProjects\\VScode Projects\\EcommerceSite\\FrontEnd\\Pages\\Slider.razor",
-      "TargetPath": "Pages\\Slider.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\MyProjects\\VScode Projects\\EcommerceSite\\FrontEnd\\Pages\\Index.razor",
-      "TargetPath": "Pages\\Index.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\MyProjects\\VScode Projects\\EcommerceSite\\FrontEnd\\Shared\\Components\\ProductDiscounts.razor",
+      "FilePath": "d:\\MyProjects\\Github\\EcommerceSite\\FrontEnd\\Shared\\Components\\ProductDiscounts.razor",
       "TargetPath": "Shared\\Components\\ProductDiscounts.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "d:\\MyProjects\\VScode Projects\\EcommerceSite\\FrontEnd\\Shared\\Components\\HeaderElement.razor",
-      "TargetPath": "Shared\\Components\\HeaderElement.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\MyProjects\\VScode Projects\\EcommerceSite\\FrontEnd\\_Imports.razor",
-      "TargetPath": "_Imports.razor",
-      "FileKind": "componentImport"
-    },
-    {
-      "FilePath": "d:\\MyProjects\\VScode Projects\\EcommerceSite\\FrontEnd\\Shared\\SurveyPrompt.razor",
-      "TargetPath": "Shared\\SurveyPrompt.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\MyProjects\\VScode Projects\\EcommerceSite\\FrontEnd\\Pages\\Error.cshtml",
-      "TargetPath": "Pages\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\MyProjects\\VScode Projects\\EcommerceSite\\FrontEnd\\Shared\\NavMenu.razor",
-      "TargetPath": "Shared\\NavMenu.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\MyProjects\\VScode Projects\\EcommerceSite\\FrontEnd\\Shared\\MainLayout.razor",
-      "TargetPath": "Shared\\MainLayout.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\MyProjects\\VScode Projects\\EcommerceSite\\FrontEnd\\Shared\\ItemSiteComponents\\ItemSummary.razor",
-      "TargetPath": "Shared\\ItemSiteComponents\\ItemSummary.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\MyProjects\\VScode Projects\\EcommerceSite\\FrontEnd\\Pages\\ItemSite.razor",
-      "TargetPath": "Pages\\ItemSite.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\MyProjects\\VScode Projects\\EcommerceSite\\FrontEnd\\Shared\\Components\\ProductBtn.razor",
+      "FilePath": "d:\\MyProjects\\Github\\EcommerceSite\\FrontEnd\\Shared\\Components\\ProductBtn.razor",
       "TargetPath": "Shared\\Components\\ProductBtn.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "d:\\MyProjects\\VScode Projects\\EcommerceSite\\FrontEnd\\Pages\\FetchData.razor",
+      "FilePath": "d:\\MyProjects\\Github\\EcommerceSite\\FrontEnd\\Pages\\ProductListSite.razor",
+      "TargetPath": "Pages\\ProductListSite.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "d:\\MyProjects\\Github\\EcommerceSite\\FrontEnd\\Pages\\Counter.razor",
+      "TargetPath": "Pages\\Counter.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "d:\\MyProjects\\Github\\EcommerceSite\\FrontEnd\\Shared\\Components\\BannerTitle.razor",
+      "TargetPath": "Shared\\Components\\BannerTitle.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "d:\\MyProjects\\Github\\EcommerceSite\\FrontEnd\\Shared\\SurveyPrompt.razor",
+      "TargetPath": "Shared\\SurveyPrompt.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "d:\\MyProjects\\Github\\EcommerceSite\\FrontEnd\\Shared\\MainPageLayout.razor",
+      "TargetPath": "Shared\\MainPageLayout.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "d:\\MyProjects\\Github\\EcommerceSite\\FrontEnd\\Pages\\_Host.cshtml",
+      "TargetPath": "Pages\\_Host.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\MyProjects\\Github\\EcommerceSite\\FrontEnd\\Shared\\MainLayout.razor",
+      "TargetPath": "Shared\\MainLayout.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "d:\\MyProjects\\Github\\EcommerceSite\\FrontEnd\\Pages\\FetchData.razor",
       "TargetPath": "Pages\\FetchData.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "d:\\MyProjects\\Github\\EcommerceSite\\FrontEnd\\Pages\\ItemSite.razor",
+      "TargetPath": "Pages\\ItemSite.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "d:\\MyProjects\\Github\\EcommerceSite\\FrontEnd\\Shared\\Components\\HeaderElement.razor",
+      "TargetPath": "Shared\\Components\\HeaderElement.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "d:\\MyProjects\\Github\\EcommerceSite\\FrontEnd\\Pages\\Index.razor",
+      "TargetPath": "Pages\\Index.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "d:\\MyProjects\\Github\\EcommerceSite\\FrontEnd\\Shared\\Components\\Sidebar.razor",
+      "TargetPath": "Shared\\Components\\Sidebar.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "d:\\MyProjects\\Github\\EcommerceSite\\FrontEnd\\Shared\\Components\\ProductCategoryBtn.razor",
+      "TargetPath": "Shared\\Components\\ProductCategoryBtn.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "d:\\MyProjects\\Github\\EcommerceSite\\FrontEnd\\Shared\\ItemSiteComponents\\ItemDetails.razor",
+      "TargetPath": "Shared\\ItemSiteComponents\\ItemDetails.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "d:\\MyProjects\\Github\\EcommerceSite\\FrontEnd\\Shared\\Components\\NavTree.razor",
+      "TargetPath": "Shared\\Components\\NavTree.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "d:\\MyProjects\\Github\\EcommerceSite\\FrontEnd\\_Imports.razor",
+      "TargetPath": "_Imports.razor",
+      "FileKind": "componentImport"
+    },
+    {
+      "FilePath": "d:\\MyProjects\\Github\\EcommerceSite\\FrontEnd\\Shared\\NavMenu.razor",
+      "TargetPath": "Shared\\NavMenu.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "d:\\MyProjects\\Github\\EcommerceSite\\FrontEnd\\App.razor",
+      "TargetPath": "App.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "d:\\MyProjects\\Github\\EcommerceSite\\FrontEnd\\Pages\\Error.cshtml",
+      "TargetPath": "Pages\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\MyProjects\\Github\\EcommerceSite\\FrontEnd\\Pages\\Slider.razor",
+      "TargetPath": "Pages\\Slider.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "d:\\MyProjects\\Github\\EcommerceSite\\FrontEnd\\Shared\\ProductListSite\\FilterPanel.razor",
+      "TargetPath": "Shared\\ProductListSite\\FilterPanel.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "d:\\MyProjects\\Github\\EcommerceSite\\FrontEnd\\Shared\\Components\\ProductCategory.razor",
+      "TargetPath": "Shared\\Components\\ProductCategory.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "d:\\MyProjects\\Github\\EcommerceSite\\FrontEnd\\Shared\\ItemSiteComponents\\ItemSummary.razor",
+      "TargetPath": "Shared\\ItemSiteComponents\\ItemSummary.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "d:\\MyProjects\\Github\\EcommerceSite\\FrontEnd\\Shared\\Components\\ImgSlider.razor",
+      "TargetPath": "Shared\\Components\\ImgSlider.razor",
       "FileKind": "component"
     }
   ],

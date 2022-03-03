@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MyProjects\\VScode Projects\\EcommerceSite\\FrontEnd\\FrontEnd.csproj": {}
+    "D:\\MyProjects\\Github\\EcommerceSite\\FrontEnd\\FrontEnd.csproj": {}
   },
   "projects": {
-    "D:\\MyProjects\\VScode Projects\\EcommerceSite\\FrontEnd\\FrontEnd.csproj": {
+    "D:\\MyProjects\\Github\\EcommerceSite\\FrontEnd\\FrontEnd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MyProjects\\VScode Projects\\EcommerceSite\\FrontEnd\\FrontEnd.csproj",
+        "projectUniqueName": "D:\\MyProjects\\Github\\EcommerceSite\\FrontEnd\\FrontEnd.csproj",
         "projectName": "FrontEnd",
-        "projectPath": "D:\\MyProjects\\VScode Projects\\EcommerceSite\\FrontEnd\\FrontEnd.csproj",
+        "projectPath": "D:\\MyProjects\\Github\\EcommerceSite\\FrontEnd\\FrontEnd.csproj",
         "packagesPath": "C:\\Users\\dung\\.nuget\\packages\\",
-        "outputPath": "D:\\MyProjects\\VScode Projects\\EcommerceSite\\FrontEnd\\obj\\",
+        "outputPath": "D:\\MyProjects\\Github\\EcommerceSite\\FrontEnd\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

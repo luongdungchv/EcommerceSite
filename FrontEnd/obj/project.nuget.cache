@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uLz7XIMQl4QH/CyYnFBAlIEG/qABZ8Unoube47fSl3P1c6xW3v7BJp/S8PPMczr76gFgBy9vyDHr0EjZEp2R2Q==",
+  "dgSpecHash": "KFw9ODUP7d7R4h5/MPr3i+mXDWwhc8pseabmOifz9bkuSaY9ujDHZP3GSihTIcn+kBPNuD6nYQAxV78kJkSmyw==",
   "success": true,
-  "projectFilePath": "D:\\MyProjects\\VScode Projects\\EcommerceSite\\FrontEnd\\FrontEnd.csproj",
+  "projectFilePath": "D:\\MyProjects\\Github\\EcommerceSite\\FrontEnd\\FrontEnd.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dung\\.nuget\\packages\\dnsclient\\1.4.0\\dnsclient.1.4.0.nupkg.sha512",
     "C:\\Users\\dung\\.nuget\\packages\\matblazor\\2.8.0\\matblazor.2.8.0.nupkg.sha512",
